@@ -1,10 +1,10 @@
 # SolidWorks Study Notes
 
-> Current learning progress: 29 / 43
+> Current learning progress: 43 / 43
 >
 > These notes are updated according to actual learning progress. Each lesson contains only: Core Summary, Common Mistakes, and Operation Notes.
 
-<!-- video-course-notes-progress: P29/43 -->
+<!-- video-course-notes-progress: P43/43 -->
 
 # Phase 1: Interface and Sketching Fundamentals (P01–P08)
 
@@ -862,5 +862,439 @@
 - Component > right-click > Isolate temporarily displays only the target component.
 
 ![Lesson 16: Final under-desk drawer assembly](./images/P29-under-desk-drawer-final-assembly.png)
+
+---
+
+## P30 Lesson 17: Under-Desk Drawer Project, Part 5
+
+### Core Summary
+
+- After changing the rail length, recheck every related stop; this lesson restores the outer stop by changing its boss depth to 37 mm.
+- The DIY organizer is an independent replaceable module with 0.2 mm clearance around the drawer opening, so its internal compartments can be redesigned for different items.
+- Front and rear overlap bosses support the organizer, while the front-cover dovetail locks it in place for secure yet replaceable installation.
+- Compartment geometry should follow the actual objects: the lipstick hole, earbud area, and knife slot use different depths, with rounded pickup edges.
+- Delete Face can remove small local protrusions at both ends of a thin-walled arc.
+
+### Common Mistakes
+
+- Extending the rails without rechecking the existing stops, allowing the drawer to pass the stop;
+- Making the DIY module the same size as the drawer opening, so the printed part cannot be inserted smoothly;
+- Repeatedly guessing a centering dimension instead of calculating half the side-to-side difference;
+- Cutting only the lipstick-hole outline without adding a retaining edge;
+- Copying the lesson dimensions for storage slots without measuring the actual earbuds, lipstick, or tools.
+
+### Operation Notes
+
+- Rail stop boss > Edit Feature > Depth 37 mm restores the outer stop after the rail is extended.
+- Drawer > Cut-Extrude > rectangle height 85 mm > Up to Next creates the DIY-module opening.
+- Assembly > New Part > drawer bottom face > 0.2 mm clearance on all four sides creates the replaceable organizer outline.
+- Organizer overlap boss > Length 18 mm > Mirror > extrude downward 2 mm creates the front-cover engagement feature.
+- Matching drawer notch > Clearance 0.5 mm > Cut 2.2 mm provides assembly space for the organizer boss.
+- Smart Dimension > select a line > hold Shift and select a circumference dimensions the distance from the line to the circle's outer edge.
+- Insert > Face > Delete removes unwanted protruding faces at the ends of a thin-walled arc.
+- Component > Isolate focuses the workspace on designing the DIY organizer's internal features.
+
+![Lesson 17: DIY organizer for the under-desk drawer](./images/P30-under-desk-drawer-diy-insert.png)
+
+---
+
+## P31 Lesson 18: Under-Desk Drawer Project, Part 6
+
+### Core Summary
+
+- The final lesson adds card, SD-card, SIM-card, and eject-pin slots, then reviews the design for strength, material use, sliding, sharp edges, and interference.
+- A separate “3D-printed parts” assembly spreads out five components so problems hidden in the normal assembled state can be inspected.
+- Adding 1 mm chamfers at rail entrances and slide ends improves insertion and motion; fillets on touch edges and storage corners reduce sharpness.
+- Late fillets and chamfers replace original edges and may break linked sketches in other parts, so dimensions and coincident relations must be rebuilt.
+- After fillet optimization, repeat section and interference checks; this lesson fixes interference between the DIY organizer and drawer fillets with matching 3.5 mm fillets.
+
+### Common Mistakes
+
+- Using the same depth for the eject-pin and SD-card slots, making the tiny eject pin difficult to retrieve;
+- Inspecting only the main assembled state and missing problems hidden behind other components;
+- Ignoring errors in linked sketches after adding rail fillets or chamfers;
+- Adding fillets indiscriminately and creating interference with the replaceable module;
+- Checking only simulated assembly motion without verifying the printed insertion chamfers and actual installation direction.
+
+### Operation Notes
+
+- Press S to open the shortcut bar for the current environment; frequently used commands can be added for quick access.
+- Eject-pin/SD-card slots > Thin Feature cut > Thickness 2 mm > Depth 7 mm creates three narrow slots at once.
+- Insert > Face > Move > raise the eject-pin slot bottom face 3 mm reduces its depth from 7 mm to 4 mm.
+- Tile two assemblies side by side > Ctrl-drag components creates an exploded “3D-printed parts” inspection assembly.
+- Multi-select components > right-click > Isolate displays only two or more related components for inspection.
+- Rail entrances and slide ends > Chamfer 1 mm improves installation and sliding smoothness.
+- If the drawer interferes with the DIY organizer, add 3.5 mm fillets to the organizer's four matching corners to clear the drawer fillets.
+- File > Save As > 3MF exports the format used by the course slicer.
+
+![Lesson 18: Final fit of the under-desk drawer](./images/P31-under-desk-drawer-final-fit.png)
+![Lesson 18: 3D-printable drawer parts](./images/P31-under-desk-drawer-printable-parts.png)
+
+---
+
+## P32 Supplementary Lesson: Printing and Installing the Drawer
+
+### Core Summary
+
+- After importing the 3MF into the slicer, split it into objects, orient and arrange each part individually, and print this project on two build plates.
+- The lesson uses a 0.2 mm Standard preset with top-surface ironing and normal automatic supports enabled.
+- Before printing, check support conflicts, out-of-bounds parts, the build plate, and nozzle condition; ignore a slicing warning only after confirming the job is actually printable.
+- Install the DIY organizer first, then slide the large drawer into the rails, add the small drawer, and press the front cover fully into the dovetails.
+- Attach the rails beneath the desk with 1 mm nano tape at six locations and press every pad firmly.
+
+### Common Mistakes
+
+- Failing to use Split to Objects after import, so all parts move together and cannot be arranged independently;
+- Placing a part outside the build plate or resting it on a small, unstable face;
+- Forcing supports under every 45-degree slope, wasting material and degrading the surface;
+- Ignoring a support-conflict warning before checking the conflict location and prior test experience;
+- Reversing the drawer orientation or failing to press the dovetail front cover fully home;
+- Using too little nano tape or failing to press each attachment point firmly.
+
+### Operation Notes
+
+- Slicer > right-click > Split to Objects allows each part to be moved and rotated independently.
+- After automatic arrangement, inspect the plate manually to keep every part within bounds and minimize the number of plates.
+- Print Preset > 0.2 mm Standard > Top Surface Ironing enabled improves exposed top surfaces.
+- Support > Normal (Auto) enabled supports suspended regions inside the drawer.
+- Slice one plate at a time to review time, material, supports, and warnings for each plate.
+- Apply 1 mm nano tape at six rail-edge locations and press firmly to mount the drawer beneath the desk.
+
+---
+
+# Phase 5: Drawings and Course Direction (P33–P35)
+
+## P33 Lesson 19: Engineering Drawings, Part 1
+
+### Core Summary
+
+- An engineering drawing is a technical manufacturing document; create it directly from a part, select a GB sheet size, and place front, projected, and isometric views.
+- Dimensions, tolerances, surface finish, datums, and geometric tolerances collectively communicate manufacturing requirements; annotations should be complete without duplication.
+- Section, Detail, Broken-out Section, and Break views reveal internal features, enlarge local details, expose a local interior, and shorten long parts respectively.
+- The drawing remains linked to the source part, so drawing views and related dimensions update when the model changes.
+
+### Common Mistakes
+
+- Starting with an unrelated blank drawing instead of creating it from the target part and establishing the correct link;
+- Repeating the same dimension in multiple views or within a dimension chain;
+- Leaving a threaded diameter shown as an ordinary “Ø5” instead of changing it to an M5 thread callout;
+- Applying a Break view to a part that does not need one, making the drawing harder to read;
+- Failing to rebuild and inspect dimensions, views, and tolerances after changing the source model.
+
+### Operation Notes
+
+- File > Make Drawing from Part > GB A4 creates an associated drawing from the current part.
+- View Palette > drag the Front view, then move the pointer to place projected and isometric views.
+- Drawing View > context toolbar > Projected View adds more orthographic views.
+- Dimension Properties > Tolerance/Precision sets bilateral or shaft/hole fit tolerances.
+- Drawing > Section View/Detail View/Broken-out Section/Break View communicates internal and local details.
+- Annotations > Surface Finish/Datum Feature/Geometric Tolerance/Centerline adds manufacturing requirements.
+- Drawing view > right-click > Open Part switches to the linked source part.
+
+---
+
+## P34 Lesson 20: Engineering Drawings, Part 2 and Career Advice
+
+### Core Summary
+
+- A drawing title block can read custom properties from the part; material, name, designation, and designer should be maintained in the source model.
+- Sheet scale and individual view rotation control the layout; Hole Callout can describe a standard hole's diameter, depth, countersink, and angle in one annotation.
+- Assembly drawings use a workflow similar to part drawings and can include a bill of materials with designation, material, and other columns.
+- A BOM can be saved as Excel for purchasing, manufacturing, or further table processing.
+
+### Common Mistakes
+
+- Double-clicking title-block text instead of entering data in the source part's custom properties;
+- Filling “designation” and the template's “part number” with two conflicting numbering systems;
+- Crowding views onto the sheet instead of reducing the sheet scale first;
+- Dimensioning each countersunk-hole feature manually and omitting hole depth or countersink angle;
+- Selecting the wrong BOM scope or column properties, leaving part, designation, or material information incomplete.
+
+### Operation Notes
+
+- Part > File Properties > Custom fills material, name, designation, and designer fields that update the title block.
+- Sheet lower-right scale or Sheet Properties > Custom Scale changes the scale of the entire sheet.
+- View > Rotate View > 90° changes the orientation of one drawing view.
+- Dimension Properties > Leaders > Diameter changes a partial arc dimension from radius to diameter.
+- Annotations > Hole Callout > select a hole edge automatically creates the standard hole description.
+- Annotations > Tables > Bill of Materials > Parts Only creates an assembly BOM.
+- BOM > right-click > Save As > XLS exports an Excel workbook.
+
+---
+
+## P35 Mechanical-Arm Project Course Introduction
+
+### Core Summary
+
+- Being able to model several parts is not the same as designing independently; complete project experience bridges software operation and engineering design.
+- The advanced mechanical-arm course focuses on identifying and solving problems to produce a 3D-printable, working mechanism.
+- Completing real small projects during university builds design workflow, manufacturing awareness, and troubleshooting experience early.
+
+### Common Mistakes
+
+- Stopping practice after learning basic commands instead of completing full projects;
+- Pursuing appearance alone without validating assembly, motion, or manufacturability;
+- Assuming that reproducing a drawing means being able to propose and implement a structure from scratch.
+
+### Operation Notes
+
+- This lesson introduces the advanced course and adds no new SOLIDWORKS operations.
+
+---
+
+# Phase 6: Oscillating Fan Base Project (P36–P43)
+
+## P36 Lesson 21: Oscillating Fan Base Project, Part 1
+
+### Core Summary
+
+- Break the requirements into the motor, crank-rocker mechanism, rotating base, bearing support, switch, and power supply before defining their structural relationships.
+- The rotating base uses two deep-groove ball bearings so overturning moment becomes radial load, which the bearings handle better.
+- Select standard components before modeling; the enclosure shape and internal space must adapt to the motor and transmission mechanism.
+
+### Common Mistakes
+
+- Supporting the rotating base with only one bearing, which can subject it to overturning moment and cause wobble;
+- Choosing upper and lower bearings with the same bore, making it difficult to pass the rotating shaft through them in sequence;
+- Fully tightening the shoulder screw and nut, locking the connecting-rod joint;
+- Finalizing the enclosure shape before fitting the mechanism, leaving no room for the motor or linkage.
+
+### Operation Notes
+
+- Concept design > sketch the relationships among power, transmission, support, switch, and enclosure on paper before modeling in SOLIDWORKS.
+- Motor selection > a 5 V USB supply can use an approximately 6 V, 5 RPM geared motor; one crank revolution makes the rocker reciprocate twice.
+- Bearing layout > pair upper and lower deep-groove ball bearings with different bores to simplify installation and stabilize rotation.
+- Joint design > use clearance between the connecting-rod hole and the shoulder screw shank, and leave rotational clearance at the nut.
+- 3D-printed threads > embed metal screws and nuts at loaded joints instead of printing small load-bearing threads.
+
+![Lesson 21: Geared motor](./images/P36-geared-motor.png)
+![Lesson 21: Panel switch](./images/P36-panel-switch.png)
+![Lesson 21: Lock nut](./images/P36-lock-nut.png)
+
+---
+
+## P37 Lesson 22: Oscillating Fan Base Project, Part 2
+
+### Core Summary
+
+- Use the shoulder-screw and bearing specifications to define the rotating support, then model the enclosure, rotating base, and screw parts.
+- Build, mate, and check interference inside the assembly to validate the initial concept iteratively.
+- Toolbox generates standard bearings, while Save as Copy and Open quickly derives screws of similar design.
+
+### Common Mistakes
+
+- Selecting a bearing by designation alone without checking bore, outside diameter, and width;
+- Leaving a revolve sketch open or failing to make the rotation centerline construction geometry, causing the feature to fail;
+- Overwriting the original file while saving a similar part, losing the original size;
+- Failing to inspect bearing end faces, shoulder-screw shank length, and motor clearance after assembly.
+
+### Operation Notes
+
+- Bearing selection > use 619/5 (5×13×4 mm) for the lower bearing and 619/9 (9×20×6 mm) for the upper bearing.
+- Enclosure modeling > sketch a 60×120 mm profile on the Top Plane, extrude 60 mm, fillet 6 mm, shell 2 mm, and cut a 36 mm Through All bottom hole.
+- Bearing seats > sketch a revolved section on the Front Plane and use Revolved Boss/Base; set upper and lower seat diameters to 20 mm and 13 mm.
+- Toolbox > Task Pane > Design Library > Toolbox > GB > Bearings > Deep Groove Ball Bearings selects a size, generates the part, and inserts it into the assembly.
+- Rotating base > draw a closed section and vertical construction centerline on the Front Plane, then use Revolved Boss/Base.
+- Assembly mates > apply Concentric to cylindrical faces and Coincident to locating end faces.
+- Cosmetic Thread > Insert > Annotations > Cosmetic Thread > select the cylindrical face and specify M4.
+- Derived part > File > Save As > Save as Copy and Open, then change dimensions to create the M3 shoulder screw while preserving the M4 original.
+- Model update > Ctrl+B rebuilds, Ctrl+S saves, and Ctrl+Tab switches among open documents.
+
+![Lesson 22: Rotating base](./images/P37-rotating-base.png)
+![Lesson 22: Deep-groove ball bearing](./images/P37-ball-bearing.png)
+![Lesson 22: M4 shoulder screw](./images/P37-m4-shoulder-screw.png)
+![Lesson 22: M3 shoulder screw](./images/P37-m3-shoulder-screw.png)
+![Lesson 22: Sectioned oscillating-base assembly](./images/P37-fan-base-section.png)
+
+---
+
+## P38 Supplementary Lesson 10: Version Issues and Pack and Go
+
+### Core Summary
+
+- Native files open in the same or newer SOLIDWORKS version, but an older version cannot directly open files saved by a newer one.
+- Neutral formats such as STEP and Parasolid allow cross-version solid viewing but do not preserve the original feature tree.
+- An assembly depends on its referenced part files; use Pack and Go to migrate, share, or create milestone backups of the complete project.
+
+### Common Mistakes
+
+- Sending only the assembly file and omitting its parts, causing missing components for the recipient;
+- Assuming STEP retains the complete modeling history when a neutral file normally contains only imported bodies;
+- Packing files without a prefix or suffix, creating duplicate names and incorrect references between project stages;
+- Using an early service-pack release such as SP0 or SP1 for a complex assembly, which may be less stable.
+
+### Operation Notes
+
+- Version check > read the major version and SP release at the lower-left of the interface; prefer the mature SP5 release of that major version.
+- Cross-version save > File > Save As > STEP or Parasolid lets an older version import the solid.
+- Project packaging > File > Pack and Go > choose a destination folder or ZIP archive and save all referenced files.
+- Package naming > add the lesson-stage suffix in Pack and Go to prevent same-name parts across milestones.
+- Milestone archive > create a new package after each lesson so work can resume from the previous complete stage after an error.
+
+---
+
+## P39 Lesson 23: Oscillating Fan Base Project, Part 3
+
+### Core Summary
+
+- Model the crank, connecting rod, and rocker and assemble them so continuous motor rotation becomes reciprocating base motion.
+- Use the shoulder-screw shank as the pivot, while a lock nut and stepped hole control axial clearance.
+- Initial dimensions need not be final; first build a movable assembly, then iterate for interference, alignment, and available component sizes.
+
+### Common Mistakes
+
+- Testing the crank before fully constraining the motor, causing the motor to move with the linkage;
+- Matching the joint hole exactly to the shoulder-screw shank diameter, making the assembled pivot too tight to rotate;
+- Leaving an M4 Cosmetic Thread on an M3 screw and creating a feature-tree error;
+- Selecting the wrong object while copying a part or adding a mate, creating duplicates or overdefined mates;
+- Verifying only that the parts assemble without dragging through the full travel and missing linkage-to-enclosure interference.
+
+### Operation Notes
+
+- Crank connection > sketch a 5 mm double-flat hole from the motor shaft, cut 4 mm, and use Hole Wizard for an ISO M3 countersunk hole.
+- Pivot hole > for a 4 mm shoulder-screw shank, set the connecting-rod hole to approximately 4.15 mm for rotational clearance.
+- Motor positioning > fully constrain the motor with Concentric, Coincident, and Distance mates; initially set 2 mm between its top and the enclosure's inner top.
+- Rocker holes > use 5.1 mm for the M4 shoulder-screw shank hole and 4.2 mm for the thread-clearance hole.
+- Assembly check > rotate the crank through a full revolution and watch for interference among the connecting rod, rocker, screws, and enclosure.
+- Isolate parts > select the parts in the assembly > right-click > Isolate, then edit the displayed local details.
+- Copy part > Ctrl-drag a part in the assembly to duplicate the same shoulder screw or nut.
+- Lock nut > Hole Wizard > Tapped Hole > specify M4 or M3; derive the similar size with Save as Copy.
+
+![Lesson 23: Crank part](./images/P39-crank-part.png)
+![Lesson 23: Rocker part](./images/P39-rocker-part.png)
+![Lesson 23: Link blank](./images/P39-link-blank.png)
+![Lesson 23: Connecting rod](./images/P39-connecting-rod.png)
+![Lesson 23: Crank-rocker assembly](./images/P39-linkage-assembly.png)
+![Lesson 23: Lock nut](./images/P39-lock-nut.png)
+![Lesson 23: Moving mechanism assembly](./images/P39-motion-assembly.png)
+
+---
+
+## P40 Lesson 24: Oscillating Fan Base Project, Part 4
+
+### Core Summary
+
+- Reduce the total crank-rocker height by shortening shoulder screws, thinning members, and recessing the nuts.
+- Create a bushing and bottom plate in context, then add motor mounts and a switch opening to the enclosure.
+- Combine Isolate, transparency, section views, and mechanism dragging to inspect clearance, interference, and assembly feasibility.
+
+### Common Mistakes
+
+- Shortening only the screw without adjusting the connecting rod, nut, and mating faces, misaligning the assembly;
+- Making a hexagonal recess too small for the nut or too large to locate it securely;
+- Using the wrong reference-plane direction or offset, placing the motor mount on the wrong side of the enclosure;
+- Using Up to Body without selecting the enclosure, or extruding in the wrong direction, so the mount does not join the enclosure;
+- Giving the bottom plate no clearance from its locating groove, preventing a printed plate from fitting.
+
+### Operation Notes
+
+- Mechanism compression > reduce the connecting-rod/shoulder-screw engagement from 4.5 mm to 2.5 mm and the M3 screw shank length from 10 mm to 5 mm.
+- Nut recess > sketch a hexagon on the crank or rocker face and Cut-Extrude so the lock nut sits inside the part and lowers the assembly height.
+- Rotating support > shorten the M4 shoulder-screw shank from 30 mm to 25 mm and reduce bearing spacing from 10 mm to 9 mm.
+- Bushing > Assembly > Insert Components > New Part > sketch the revolved section from bearing clearances, Revolved Boss/Base, and set the center hole to 5.15 mm.
+- Offset Plane > Reference Geometry > Plane > select the enclosure inner face and offset 24.8 mm for the motor-mount sketch.
+- Mounting platforms > sketch two equal-width slots on the offset plane, Extruded Boss/Base > Up to Body, and select the enclosure.
+- Switch hole > sketch an 8.2 mm circle on the enclosure top, cut Through All, then apply Concentric and face Coincident mates to the switch and nut.
+- Bottom-plate groove > Convert Entities from the enclosure's lower inner loop, offset inward 1.5 mm, and extrude inward to form a 2 mm-deep locating seat.
+- Bottom plate > create an in-context part, convert the groove outline, offset 0.1 mm for assembly clearance, and extrude to 2 mm thickness.
+
+![Lesson 24: Motor and crank-rocker subassembly](./images/P40-motor-linkage-subassembly.png)
+![Lesson 24: Bottom assembly and clearance check](./images/P40-bottom-assembly-check.png)
+
+---
+
+## P41 Lesson 25: Oscillating Fan Base Project, Part 5
+
+### Core Summary
+
+- Join the bearing seat to the enclosure and reinforce it with thin ribs; measure approximately 60 degrees between the mechanism's two extreme positions.
+- Add manufacturable holes, bosses, chamfers, and locating features for the motor, rotating base, bottom plate, and EVA feet.
+- When a standard screw does not match the software's hole library exactly, choose a similar hole type and override it with custom dimensions.
+
+### Common Mistakes
+
+- Placing a reinforcement rib where it blocks access to the switch nut, preventing tool tightening after installation;
+- Measuring only one mechanism position instead of both extremes, so the true oscillation angle is unknown;
+- Overlapping bottom-plate countersinks with motor mounting holes, weakening the structure or causing screw interference;
+- Using a center rectangle to locate holes and having its center point interpreted by Hole Wizard as an extra hole position;
+- Adding EVA feet without locating edges, making manual placement inaccurate.
+
+### Operation Notes
+
+- Join bearing seat > Convert Entities from the enclosure inner loop on the seat bottom and extrude 3 mm to make a connected structure.
+- Reinforcement ribs > use open-line sketches with Thin Feature extrusion, Thickness 2 mm, and Up to Body.
+- Measure oscillation > on the Top Plane, draw lines along the rocker's two extreme positions and Smart Dimension their included angle at approximately 60°.
+- Motor pilot holes > Hole Wizard > Simple Hole > Diameter 2.5 mm > Depth 10 mm for M3 self-tapping screws.
+- Entry chamfers > add a 2 mm chamfer at the rotating-base entrance and approximately 1.5 mm × 45° on the outer edge for insertion and appearance.
+- Anti-slip slots > sketch a 31×2 mm rectangle on the rotating-base top, cut Through All, and circular-pattern 10 instances around the center axis.
+- Bottom-plate countersinks > choose the closest countersunk hole in Hole Wizard, enable custom sizing, and use approximately 2.8 mm bore and 4.8 mm countersink diameter.
+- Bottom-plate screw posts > add four 6 mm bosses inside the enclosure, then cut 2.11 mm-diameter, 10 mm-deep self-tapping pilot holes.
+- EVA feet > create four in-context pads 8 mm in diameter and 1.5 mm thick, with 8.5 mm locating thin walls on the bottom plate.
+
+![Lesson 25: Internal structure and rib check](./images/P41-internal-assembly-check.png)
+![Lesson 25: Bottom plate and foot-pad assembly check](./images/P41-bottom-plate-assembly.png)
+
+---
+
+## P42 Lesson 26: Oscillating Fan Base Project, Part 6
+
+### Core Summary
+
+- Complete the USB cable exit, crank guard, cable-storage groove, and magnet mount so wiring clears the moving mechanism and can be stored.
+- Perform final dynamic and section checks, correcting interference involving the connecting rod, rocker, screws, ribs, and bearing seat.
+- Create a separate “3D-printed parts” assembly to distinguish custom printed parts from purchased standard components.
+
+### Common Mistakes
+
+- Cutting an enclosure opening while the bottom-plate sketch still references converted enclosure edges, causing its outline to update or fail;
+- Making the USB slot exactly the cable width and leaving sharp corners, causing difficult routing or damaged insulation;
+- Clearing the crank with a cable guard but ignoring the motor and creating new interference;
+- Swapping the sweep profile and path, or using nonintersecting sketches, causing the Swept Cut to fail;
+- Assuming a static check proves full motion is clear when hidden interference appears only at extreme positions.
+
+### Operation Notes
+
+- Remove external reference > delete Convert Entities relations from the bottom-plate sketch, then set the existing outline to Fixed before changing the enclosure.
+- USB slot > sketch a 35° path on the enclosure bottom, use a symmetric Thin Feature cut of 3.3 mm per side and 5.3 mm depth, then add Full Round fillets.
+- Cable guard > draw a 16.5 mm-radius arc from the crank motion envelope on the bottom plate, Thin Feature extrude 2.5 mm, and revise its height for motor clearance.
+- Cable-storage groove > draw the groove profile on the Front Plane, convert the enclosure bottom as a closed path, and use Swept Cut to form the ring groove.
+- Magnet mount > create a plane tangent to the side arc, sketch a 12.4 mm circle, and Thin Feature extrude to the enclosure inner face.
+- Sketch Text > select a guide arc > Sketch Text > set the arc to construction geometry, then Cut-Extrude 0.3 mm.
+- Dynamic check > drag the crank through a full revolution with section view enabled and eliminate interference among the rod, rocker, screws, and enclosure ribs.
+- Printed-part collection > create a new assembly and insert the enclosure, bottom plate, rotating base, crank, connecting rod, rocker, bushing, and feet individually.
+
+![Lesson 26: Transmission and rotating-support components](./images/P42-drive-components.png)
+![Lesson 26: Complete internal assembly](./images/P42-internal-assembly.png)
+![Lesson 26: Finished oscillating-base enclosure](./images/P42-completed-enclosure.png)
+![Lesson 26: Exploded transmission components](./images/P42-drive-components-exploded.png)
+![Lesson 26: 3D-printable parts overview](./images/P42-printable-parts.png)
+
+---
+
+## P43 Supplementary Lesson: Oscillating-Base Assembly
+
+### Core Summary
+
+- 3D-printed parts require cleaning, test fitting, and occasional adjustment; a collision-free digital model does not guarantee first-try physical assembly.
+- Install bearings and the rotating support first, followed by the crank-rocker mechanism, switch, motor, bottom plate, feet, and magnets; manually check tightness before powering on.
+- Test under power in stages and diagnose each sticking point; feed real assembly findings back into the model instead of relying only on physical filing.
+
+### Common Mistakes
+
+- Forcing a bearing into an undersized or rough FDM hole, which can damage the print or tilt the bearing;
+- Tightening a pivot nut until the mechanism locks, or leaving it so loose that it wobbles or detaches;
+- Failing to pass the switch nut over the wires before soldering, making final installation impossible;
+- Heating the switch too long while soldering, damaging plastic parts or internal contacts;
+- Mixing parts from different design revisions and misdiagnosing the resulting interference as a dimension error;
+- Installing the bottom plate after confirming only that the motor starts, without running several cycles to reveal periodic sticking.
+
+### Operation Notes
+
+- Printed-part finishing > remove burrs from holes and mating faces, test-fit bearings gradually, and trim with a knife or file when necessary.
+- Pivot assembly > adjust the shoulder screw and lock nut until the joint rotates smoothly without obvious axial play.
+- Switch wiring > place the mounting nut over the wires before soldering, hold it with needle-nose pliers, and minimize heating time.
+- Staged testing > rotate the crank manually after installing the linkage, then power it for several cycles and install the bottom plate only after confirming smooth motion.
+- Revision check > verify by part name, dimension, or marking that every printed part belongs to the same design revision before assembly.
+- Design loop > record every filed location and assembly problem, then update clearances, chamfers, or reliefs in SOLIDWORKS.
 
 ---
